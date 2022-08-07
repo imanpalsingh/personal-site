@@ -4,7 +4,7 @@
     width: 280px;
     border: 2px solid black;
     border-radius: 180px;
-    background-image: url('images/flowers.jpg');
+    background-image: url('/images/flowers.jpg');
     background-size: cover;
     box-shadow: 13px 117px 300px -52px rgba(238,166,93,0.81);
     transform: translatey(0px);
