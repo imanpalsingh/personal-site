@@ -2,14 +2,27 @@
   import { afterUpdate } from 'svelte';
   import Modal from '../../common/modal.svelte';
   import Input from './input.svelte';
-  let history: any[] = []
+
+  let history:Array<any> = [];
+
   let query: string = "";
   let bodyRef: Element;
-
+  const terminalText = "Terminal v0.0.1"
+  let inputRef: any;
 
   afterUpdate(()=>{
-    !!history.length &&  bodyRef.scrollTo({top: bodyRef.scrollHeight,  behavior: 'smooth'})
+    if(history.length){
+      bodyRef.scrollTo({top: bodyRef.scrollHeight,  behavior: 'smooth'})
+    }
+
   })
+
+  const transferFocus = (e: Event)=>{
+    e.stopPropagation();
+    if(e.target === e.currentTarget){
+      inputRef.focus();
+    }
+  }
 
 </script>
 <style lang="scss">
@@ -49,22 +62,34 @@
     overflow: auto;
   }
 
+  .svelte{
+    color: var(--clr-terminal-magenta);
+  }
+
+  .help{
+    color: var(--clr-terminal-brown);
+  }
+
 </style>
 
-<section>
-  <Modal let:closeModal>
+<section >
+  <Modal let:closeModal onClick={transferFocus}>
     <div class="header">
-      <span class="title">Terminal v0.0.1</span>
+      <span class="title">{terminalText}</span>
       <span class="close" on:click={closeModal}>&#x2715</span>
     </div>
-    <div class="body" bind:this={bodyRef}>
+    <div class="body" bind:this={bodyRef} >
       <div class="information">
-        Welcome to the terminal! Type help for the list of commands, or anything really.
+        {`${terminalText} created with`}
+        <span class="svelte">svelte</span>.
+        {`Type `}
+        <span class="help">help</span>
+        {`for list of available commands`}
       </div>
       {#each history as Cmd}
         <Cmd.component name={Cmd.name}  />
       {/each}
-      <Input bind:history bind:query exitHandler={closeModal} />
+      <Input bind:ref={inputRef} bind:history bind:query exitHandler={closeModal} />
     </div>
   </Modal>
 </section>
