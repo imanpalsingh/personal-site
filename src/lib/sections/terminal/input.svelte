@@ -1,6 +1,6 @@
 <script lang="ts">
 
-	import { commands, commandsIndex } from './register';
+  import { commands, commandsIndex } from './register';
   import Wrong from './wrong.svelte';
   export let history: Array<any> ;
   export let query: string;

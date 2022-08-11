@@ -29,5 +29,4 @@
     <WorkItem title="Sepsis P" desc={"Using deep learning for ealry sepesis detection from clinical time series data"} link={"https://github.com/imanpalsingh/SIH2020_UP49_Aeye_BCET"} />
     <WorkItem title="Closed Source" desc={"And a lot of closed source work"} />
    </div>
-
 </Command>
