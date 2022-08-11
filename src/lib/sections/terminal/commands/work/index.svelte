@@ -27,7 +27,6 @@
     <WorkItem title="Reactjs.org" desc={"The React documentation website"} link={"https://github.com/reactjs/reactjs.org"} />
     <WorkItem title="Covid-19 NN" desc={"Research of COVID-19 Detection using Convolutional and Generative models"} link={"https://github.com/imanpalsingh/COVID-19-Detection--from-X-rays"} />
     <WorkItem title="Sepsis P" desc={"Using deep learning for ealry sepesis detection from clinical time series data"} link={"https://github.com/imanpalsingh/SIH2020_UP49_Aeye_BCET"} />
-    <WorkItem title="Closed Source" desc={"And a lot of closed soure work"} />
+    <WorkItem title="Closed Source" desc={"And a lot of closed source work"} />
    </div>
-
 </Command>

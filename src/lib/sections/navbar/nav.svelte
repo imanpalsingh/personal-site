@@ -10,6 +10,7 @@
     padding: 2rem;
     justify-content: space-evenly;
     gap: 2rem;
+    align-items: center;
   }
 
   ul{
