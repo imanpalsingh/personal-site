@@ -1,4 +1,4 @@
-<script type="ts">
+<script lang="ts">
   import Icon from 'svelte-icons-pack/Icon.svelte';
   export let icon: any;
   export let href: string;
