@@ -22,7 +22,7 @@
 
   .heading{
     font-family: var(--ff-primary-400);
-    font-size: 15rem;
+    font-size: 16vw;
     font-weight: 100;
     background: -webkit-gradient(linear, left bottom, right top, from(var(--clr-text)), to(var(--clr-primary-800)));
     -webkit-background-clip: text;
@@ -30,6 +30,11 @@
     -webkit-text-fill-color: transparent;
     animation: gradient 5s ease infinite;
     background-size: 400% 400%;
+
+    @media only screen and (min-width: 2048px){
+      font-size: 20rem;
+    }
+
   }
 
   @keyframes gradient {
