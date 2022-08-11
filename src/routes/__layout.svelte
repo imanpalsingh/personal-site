@@ -3,6 +3,8 @@
   import NavBar from "$lib/sections/navbar/nav.svelte";
 </script>
 
+
+
 <main>
   <NavBar />
     <slot />
