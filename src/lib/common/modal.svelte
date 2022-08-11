@@ -1,9 +1,10 @@
 <script lang="ts">
   import debounce from 'lodash-es/debounce';
-  let consoleOpened = false;
+  export let onClick: any;
+  let consoleOpened = true;
   let dialog: any;
 
-  $: consoleOpened? dialog.showModal(): dialog?.close()
+  $: consoleOpened? dialog?.showModal(): dialog?.close()
 
   const handleKeydown = debounce((event: KeyboardEvent) =>{
 
@@ -47,6 +48,6 @@
 </style>
 
 <svelte:window on:keydown={handleKeydown}/>
-<dialog bind:this={dialog}>
+<dialog bind:this={dialog} on:click={onClick}>
   <slot {closeModal} />
 </dialog>
